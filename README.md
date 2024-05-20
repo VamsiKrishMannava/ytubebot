@@ -1,5 +1,20 @@
 ![Logo](https://image.prntscr.com/image/z8OYRQfSSbWCAJIMBjUJQQ.png)
 
+### Directory Structure
+
+YTubeBOT/
+├── app.py
+├── config/
+│   └── playlist.json
+├── controller.py
+├── driver/
+│   └── chromedriver.exe
+├── requirements.txt
+├── utils/
+│   └── utils.py
+└── watcher.py
+
+
 # YTubeBOT - Youtube Bot
 Simple bot that was development in python 3.7, that automatically watch youtube videos. It can be used to give more views in your channel helping in the spread and increase followers/subscribers because your videos begin to gain new positions in research mechanics.
 
@@ -48,6 +63,11 @@ pip install -r requirements.txt
 python app.py
 ```
 
+### Configuration in app.py
+instances = 1
+
+Inside the ./app.py script, configure the number of async instances to launch:
+
 ## Observations
 - The script can be improved and modified, so feel free to use it any way you like.
 
@@ -59,6 +79,13 @@ python app.py
 
 - Put "?autoplay=1" in end of video link and use absolute link, final link will be like: https://www.youtube.com/watch?v=xxxxxxxxxxx?autoplay=1
 
+### Controller Class
 
+The Controller class handles:
+
+Starting WebDriver: Initializes the Selenium WebDriver with appropriate options.
+Loading Video URLs: Loads the video URLs and manages the viewing process.
+Watching Videos: Ensures each video is watched the specified number of times.
+URL Correction: Corrects the URL if the current URL deviates from the intended video URL.
 
 
